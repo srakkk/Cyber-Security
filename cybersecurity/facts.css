@@ -45,7 +45,7 @@ main{
 
 
 
-.c1{width:55vw;
+.c1{width:60vw;
     display:flex;
     flex-direction: column;
     justify-content:space-between;
@@ -53,7 +53,7 @@ main{
     padding:1rem;
 
 }
-.c2 img{width:35vw;
+.c2 img{width:30vw;
     margin: 1rem;
     border-radius: 0.5rem;
 
