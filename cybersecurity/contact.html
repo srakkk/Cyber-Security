@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact</title>
+        <link rel="stylesheet" href="contact.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+       
+    </head>
+    <body>
+        <nav>
+            <span class="navitem"><img src="w_images/logo2.png" alt="logo here" class="logo" width="65rem"></span>
+            <span><a href="index.html">HOME</a></span>
+            <span><a href="Learn_more.html">LEARN MORE</a></span>
+            <span><a href="threats.html">THREATS</a></span>
+            <span><a href="solutions.html">SOLUTIONS</a></span>
+            <span><a href="facts.html">FACTS</a></span>
+            <span><a href="recommendations.html">RECOMMENDATIONS</a></span>
+            <span><a href="contact.html">CONTACT US</a></span>
+            <span><a href="login.html">LOGIN</a></span>
+     
+            
+        </nav>
+
+        
+        <main>
+       
+            
+<!-- topic 1-->
+
+        
+        <div class="content">
+        
+            <span class="c1">
+                <div class="subtitle">Contact Us</div>
+                <form id="contactform">
+                    <div class="cform">
+                    <div>
+                        <label for="fname">First name:</label><br>
+                        <input type="text" id="fname" name="fname"><br>
+                    </div>
+                    <div>
+                        <label for="lname">Last name:</label><br>
+                        <input type="text" id="lname" name="lname">
+                    </div>
+                </div>
+                    <div>
+                        <label for="email">Email:</label><br>
+                        <input type="text" id="email" name="email">
+                    </div>
+
+                    <div>
+                        <label for="pno">Phone no:</label><br>
+                        <input type="text" id="pno" name="pno">
+                    </div>
+
+                    <div>
+                        <label for="qc">Question category:</label><br>
+                        <select name="qc" id="qc">
+                            <option value="ad">Advice</option>
+                            <option value="rec">Reccomendation</option>
+                            <option value="emg">Emergency</option>
+                          </select>
+                    </div>
+                    
+
+                    <div>
+                        <label for="message">Enter your question(s) here</label><br>
+                        <textarea id="message" name="message">What's your question?</textarea>
+                    </div>
+                    <div>
+                        <input class="subbtn" type="submit" value="Submit" >
+                    </div>
+                </form>
+                
+                
+            </span>
+        </div>
+
+        
+    <footer>
+        <a href="recommendations.html"> <img style="filter: drop-shadow( 1px 1px 4px rgba(0,0,0,0.5));"src="w_images/left-arrow.png" class="card3"></a>
+        <a href="login.html"> <img style="filter: drop-shadow( 1px 1px 4px rgba(0,0,0,0.5));"src="w_images/right-arrow.png" class="card2"></a>
+    </footer>
+
+        </main>
+   
+
+        <!-- javascript code start -->
+        <script>
+            var form = document.getElementById("contactform");
+            function handleForm(event) { event.preventDefault(); 
+            console.log("handled");
+            var email=form.email.value;
+            var pno=form.pno.value;
+            var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            var validRegex2 = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+            var count = 0;
+                if (email.match(validRegex)) {
+                    count+=1;
+                   
+                }
+                else{
+                    alert("Incorrect Email")
+                }
+                if (pno.match(validRegex2)){
+                    count+=1;
+                }  
+                else{
+                    alert("Incorrect Phone no");
+                }
+                if(count===2){
+    
+                alert("Question Submitted");
+
+                }
+  
+            }  
+            form.addEventListener('submit', handleForm);
+
+        </script>
+    </body>
+</html>

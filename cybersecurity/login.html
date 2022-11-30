@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="contact.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+       
+    </head>
+    <body>
+        <nav>
+            <span class="navitem"><img src="w_images/logo2.png" alt="logo here" class="logo" width="65rem"></span>
+            <span><a href="index.html">HOME</a></span>
+            <span><a href="Learn_more.html">LEARN MORE</a></span>
+            <span><a href="threats.html">THREATS</a></span>
+            <span><a href="solutions.html">SOLUTIONS</a></span>
+            <span><a href="facts.html">FACTS</a></span>
+            <span><a href="recommendations.html">RECOMMENDATIONS</a></span>
+            <span><a href="contact.html">CONTACT US</a></span>
+            <span><a href="login.html">LOGIN</a></span>
+     
+            
+        </nav>
+
+        
+        <main>
+       
+            
+<!-- topic 1-->
+
+        <div class="content">
+            <span class="c1" id="formbox">
+                <div class="subtitle">Login/Signup</div>
+                <form id="contactform">
+                    <div>
+                        <label for="un">Username:</label><br>
+                        <input type="text" id="un" name="un"><br>
+                    </div>
+                    <div>
+                        <label for="pw">Password:</label><br>
+                        <input type="text" id="pw" name="pw">
+                    </div>
+                    
+
+                  <div class="cform">
+                    <div>
+                        <input class="logbtn" type="submit" value="Login" >
+                    </div>
+                    <div>
+                        <input class="logbtn" type="submit" value="Sign up" >
+                    </div>
+                </form>
+            
+                
+            </span>
+        </div>
+        </div>
+
+    <footer>
+        <a href="contact.html"> <img style="filter: drop-shadow( 1px 1px 4px rgba(0,0,0,0.5));"src="w_images/left-arrow.png" class="card3"></a>
+        <a href="index.html"> <img style="filter: drop-shadow( 1px 1px 4px rgba(0,0,0,0.5));"src="w_images/right-arrow.png" class="card2"></a>
+    </footer>
+
+        </main>
+        
+   <!-- javascript part -->
+        <script>
+            var form = document.getElementById("contactform");
+            function handleForm(event) { event.preventDefault(); 
+            console.log("handled");
+            var un=form.un.value;
+            var pw=form.pw.value;
+
+            
+                if (un==="admin") {
+                    if(pw==="1234"){
+                    alert("Logged in successfully!");
+                    document.getElementById("formbox").innerHTML="<div class='subtitle2'>Logged in Successfully...</div>";
+                    }
+                    else{
+                        alert("Incorrect Details or Error");
+                    }
+                }
+                else{
+                    alert("Incorrect Details or Error");
+                }
+
+
+            }  
+            form.addEventListener('submit', handleForm);
+
+        </script>
+    </body>
+</html>
